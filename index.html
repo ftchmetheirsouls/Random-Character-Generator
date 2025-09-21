@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Random Kink Generator</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 2em; background: #f0f0f0; color: #222; }
+    button { padding: 0.5em 1em; font-size: 1em; margin-top: 1em; cursor: pointer; }
+</style>
+</head>
+<body>
+<h1>Random Kink Generator</h1>
+<p id="output" style="margin:1em 0; max-width:700px;">Click the button to generate a random kink!</p>
+<button onclick="update()">Randomize</button>
+
+<script>
+const kinks = [
+"Fave",
+"3+ Penetration",
+"Adultery",
+"Affection",
+"Anal Sex (Giving)",
+"Anal Sex (Receiving)",
+"Anal Training",
+"Anal Virginity",
+"Anatomically Correct",
+"Animal Anatomy",
+"Aphrodisiacs",
+"Approaching OOC",
+"Auto-Fellatio",
+"Biting",
+"Body Writing",
+"Bovines",
+"Breath Control",
+"Breeding",
+"Bukkake",
+"Canines",
+"Cervical Penetration",
+"Cervines",
+"Choking",
+"Clothed Sex",
+"Clothing Play",
+"Cock / Ball Smothering",
+"Cock / Balls Worship",
+"Cock Slapping",
+"Cock Warming",
+"Coercion / Blackmail",
+"Creampie",
+"Cuckolding",
+"Cum",
+"Cum From Mouth / Nose",
+"Cum Marking",
+"Cum Milking",
+"Cum on Clothes",
+"Cunnilingus (Giving)",
+"Cut Cocks",
+"Dating",
+"Degradation",
+"Demons",
+"Dirty Talking",
+"Discipline / Reinforcement",
+"Dragons",
+"Drawn Image References",
+"Electric Toys",
+"Equines",
+"Excessive Precum",
+"Excessive Semen",
+"Exhibitionism",
+"Exotic Cocks",
+"Exotic Species",
+"Face-Fucking",
+"Face-Sitting",
+"Face Slapping",
+"Facial Hair / Beards",
+"Fellatio (Performing)",
+"Fellatio (Receiving)",
+"Females",
+"Femdom",
+"Fingering (Anal)",
+"Fingering (Vaginal)",
+"Fingers in Mouth",
+"Flaccid Play",
+"Forced Incest",
+"Forced Nudity",
+"Gags",
+"Gangbangs",
+"Gaping (Vaginal)"
+// You can continue adding the full list here
+];
+
+function update(){
+    const randomKink = kinks[Math.floor(Math.random() * kinks.length)];
+    document.getElementById("output").innerText = randomKink;
+}
+</script>
+</body>
+</html>
