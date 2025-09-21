@@ -1,97 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Random Kink Generator</title>
-<style>
-    body { font-family: Arial, sans-serif; padding: 2em; background: #f0f0f0; color: #222; }
-    button { padding: 0.5em 1em; font-size: 1em; margin-top: 1em; cursor: pointer; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Character Generator</title>
 </head>
 <body>
-<h1>Random Kink Generator</h1>
-<p id="output" style="margin:1em 0; max-width:700px;">Click the button to generate a random kink!</p>
+<h1>Random Character Generator</h1>
+<p id="output" style="margin:1em auto; padding:0 1em; max-width:700px;">Press the button to generate a character.</p>
 <button onclick="update()">Randomize</button>
-
 <script>
-const kinks = [
-"Fave",
-"3+ Penetration",
-"Adultery",
-"Affection",
-"Anal Sex (Giving)",
-"Anal Sex (Receiving)",
-"Anal Training",
-"Anal Virginity",
-"Anatomically Correct",
-"Animal Anatomy",
-"Aphrodisiacs",
-"Approaching OOC",
-"Auto-Fellatio",
-"Biting",
-"Body Writing",
-"Bovines",
-"Breath Control",
-"Breeding",
-"Bukkake",
-"Canines",
-"Cervical Penetration",
-"Cervines",
-"Choking",
-"Clothed Sex",
-"Clothing Play",
-"Cock / Ball Smothering",
-"Cock / Balls Worship",
-"Cock Slapping",
-"Cock Warming",
-"Coercion / Blackmail",
-"Creampie",
-"Cuckolding",
-"Cum",
-"Cum From Mouth / Nose",
-"Cum Marking",
-"Cum Milking",
-"Cum on Clothes",
-"Cunnilingus (Giving)",
-"Cut Cocks",
-"Dating",
-"Degradation",
-"Demons",
-"Dirty Talking",
-"Discipline / Reinforcement",
-"Dragons",
-"Drawn Image References",
-"Electric Toys",
-"Equines",
-"Excessive Precum",
-"Excessive Semen",
-"Exhibitionism",
-"Exotic Cocks",
-"Exotic Species",
-"Face-Fucking",
-"Face-Sitting",
-"Face Slapping",
-"Facial Hair / Beards",
-"Fellatio (Performing)",
-"Fellatio (Receiving)",
-"Females",
-"Femdom",
-"Fingering (Anal)",
-"Fingering (Vaginal)",
-"Fingers in Mouth",
-"Flaccid Play",
-"Forced Incest",
-"Forced Nudity",
-"Gags",
-"Gangbangs",
-"Gaping (Vaginal)"
-// You can continue adding the full list here
-];
+const names = ["Alex", "Jordan", "Sam", "Taylor", "Casey"];
+const species = ["Human", "Elf", "Dwarf", "Orc", "Dragon"];
+const gender = ["Male", "Female", "Non-binary"];
+const height = ["Short", "Average", "Tall"];
+const build = ["Slim", "Average", "Muscular", "Heavy"];
+const hair_length = ["Short", "Medium", "Long", "Bald"];
+const hobby = ["Reading", "Fighting", "Cooking", "Exploring", "Crafting"];
+const job = ["Farmer", "Blacksmith", "Mage", "Soldier", "Merchant"];
+const food = ["Bread", "Meat", "Fruit", "Vegetables", "Fish"];
+const drink = ["Water", "Ale", "Wine", "Milk", "Juice"];
+const personality = ["Brave", "Shy", "Cheerful", "Serious", "Cunning"];
+const quirk = ["Hums often", "Collects rocks", "Talks to animals", "Sleepwalks", "Laughs randomly"];
+const kinks = ["Fave", "3+ Penetration", "Adultery", "Affection", "Anal Sex (Giving)", "Anal Sex (Receiving)"]; // Shortened list for example, can expand fully
 
-function update(){
-    const randomKink = kinks[Math.floor(Math.random() * kinks.length)];
-    document.getElementById("output").innerText = randomKink;
+function randomChoice(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function update() {
+  const character = `You generated a character: ${randomChoice(names)}, a ${randomChoice(species)} ${randomChoice(gender)}, ${randomChoice(height)} tall, ${randomChoice(build)} build, hair length is ${randomChoice(hair_length)}, enjoys ${randomChoice(hobby)}, works as a ${randomChoice(job)}, favorite food is ${randomChoice(food)}, favorite drink is ${randomChoice(drink)}, personality is ${randomChoice(personality)}, quirk is ${randomChoice(quirk)}, kink is ${randomChoice(kinks)}.`;
+  document.getElementById("output").innerText = character;
 }
 </script>
 </body>
