@@ -1,37 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Random Character Generator</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Random Character Generator</h1>
-<p id="output" style="margin:1em auto; padding:0 1em; max-width:700px;">Press the button to generate a character.</p>
+<p id="output" style="margin:1em auto; padding:0 1em; max-width:700px;">Click "Randomize" to generate a character.</p>
 <button onclick="update()">Randomize</button>
-<script>
-const names = ["Alex", "Jordan", "Sam", "Taylor", "Casey"];
-const species = ["Human", "Elf", "Dwarf", "Orc", "Dragon"];
-const gender = ["Male", "Female", "Non-binary"];
-const height = ["Short", "Average", "Tall"];
-const build = ["Slim", "Average", "Muscular", "Heavy"];
-const hair_length = ["Short", "Medium", "Long", "Bald"];
-const hobby = ["Reading", "Fighting", "Cooking", "Exploring", "Crafting"];
-const job = ["Farmer", "Blacksmith", "Mage", "Soldier", "Merchant"];
-const food = ["Bread", "Meat", "Fruit", "Vegetables", "Fish"];
-const drink = ["Water", "Ale", "Wine", "Milk", "Juice"];
-const personality = ["Brave", "Shy", "Cheerful", "Serious", "Cunning"];
-const quirk = ["Hums often", "Collects rocks", "Talks to animals", "Sleepwalks", "Laughs randomly"];
-const kinks = ["Fave", "3+ Penetration", "Adultery", "Affection", "Anal Sex (Giving)", "Anal Sex (Receiving)"]; // Shortened list for example, can expand fully
-
-function randomChoice(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-function update() {
-  const character = `You generated a character: ${randomChoice(names)}, a ${randomChoice(species)} ${randomChoice(gender)}, ${randomChoice(height)} tall, ${randomChoice(build)} build, hair length is ${randomChoice(hair_length)}, enjoys ${randomChoice(hobby)}, works as a ${randomChoice(job)}, favorite food is ${randomChoice(food)}, favorite drink is ${randomChoice(drink)}, personality is ${randomChoice(personality)}, quirk is ${randomChoice(quirk)}, kink is ${randomChoice(kinks)}.`;
-  document.getElementById("output").innerText = character;
-}
-</script>
+<script src="script.js"></script>
 </body>
 </html>
